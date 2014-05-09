@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name ="description" content="Sina Jazayeri - www.SinJaz.com" />
+
+    <title>Sina Jazayeri</title>
+    <link rel="stylesheet" href="css/main.css"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="body center-align" ng-app="sinjaz">
+
+  <div  ng-show="sinahaha"
+        ng-class="{'fade-in': showOverlay,
+                   'fade-out':!showOverlay,
+                   'overlay-container': true}"
+        ng-include="'partials/overlay-partial.html'" 
+        ng-controller="OverlayController"></div>
+
+  <div class="outer-container">
+    <div ng-class="{'inner-container': true,
+                    'blur-on': showOverlay,
+                    'blur-off': !showOverlay}" ng-view></div>
+  </div>
+  <div class="footer" ng-include="'partials/footer-partial.html'" ng-controller="FooterController"></div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script src="//www.parsecdn.com/js/parse-1.2.17.min.js"></script>
+  
+  <script src="app.js"></script>
+  
+  <script src="controllers/fun-controller.js"></script>
+  <script src="controllers/home-controller.js"></script>
+  <script src="controllers/work-controller.js"></script>
+  <script src="controllers/later-controller.js"></script>
+  <script src="controllers/footer-controller.js"></script>
+  <script src="controllers/overlay-controller.js"></script>
+
+  <script src="services/data-service.js"></script>
+
+  <script src="directives/awesome-directive.js"></script>
+  <script src="directives/hello-directive.js"></script>
+  <script src="directives/my-directive.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<div ng-class="{'fade-in': true,
+				'center-align':true}">
+	<h1>{{pageTitle}}</h1>
+	<div class="content">
+		
+		<div ng-class="{'article': true,
+			 			'external-link': false}"
+			 ng-repeat="article in articles">
+			<h2>{{article.title}} <span class="date">{{article.created}}</span></h2>
+			<div ng-bind-html-unsafe="article.description"></div>
+		</div>
+
+		<div ng-class="{'article': true,
+			 			'external-link': true,
+			 			'extra-margin-top': true}">
+			<a href="" ng-click="clickOnFiddles()">{{moreButtonText()}}</a>
+		</div>
+
+		<div class="jsfiddles">
+			<div ng-show="showFiddles()"
+				 ng-class="{'article': true,
+				 			'external-link': true}"
+				 ng-repeat="fiddle in fiddles"
+				 ng-click="clickOnArticle(fiddle.url)">
+				<h2>{{fiddle.title}} <span class="date">{{fiddle.created}}</span></h2>
+				<div ng-bind-html-unsafe="fiddle.description"></div>
+			</div>
+		</div>
+	</div>
+</div>

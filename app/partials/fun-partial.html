@@ -1,0 +1,18 @@
+<div ng-class="{'center-align':true}">
+	<h1>{{pageTitle}}</h1>
+	<div class="content">
+		
+		<div ng-class="{'article': true,
+			 			'external-link': false}"
+			 ng-repeat="article in articles">
+			<h2 ng-bind-html-unsafe="article.title"></h2>
+
+
+			<div ng-class="{'indented-div': false}"
+				 ng-repeat="item in article.description"
+				 ng-bind-html-unsafe="item.text">
+			</div>
+
+		</div>
+	</div>
+</div>

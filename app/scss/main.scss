@@ -1,0 +1,412 @@
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+@import url(http://fonts.googleapis.com/css?family=Sue+Ellen+Francisco);
+
+$outer-border-color: #666666;
+$middle-border-color: #282A28;
+
+$content-top-distance: 15%;
+$blueColor: #00011f;
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity:0;
+    margin-top: 20px;
+  }
+  to {
+    opacity:1;
+    margin-top: 0px;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity:1;
+  }
+  to {
+    opacity:0;
+  }
+}
+
+html{
+  right: 10px;
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  position: absolute;
+  
+}
+
+body{
+  width:100%;
+  height:100%;
+  color: #ffffff;
+  font-size: 87.5%;
+  line-height: 1.5;
+  text-align: left;
+  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+
+  .fade-in{
+    opacity:0;
+    -webkit-animation:fadeIn ease-Out 1;
+    -moz-animation:fadeIn ease-Out 1;
+    animation:fadeIn ease-Out 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:0.5s;
+    -moz-animation-duration:0.5s;
+    animation-duration:0.5s;
+  }
+
+  .fade-out{
+    -webkit-animation:fadeOut ease-Out 1;
+    -moz-animation:fadeOut ease-Out 1;
+    animation:fadeOut ease-Out 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:0.5s;
+    -moz-animation-duration:0.5s;
+    animation-duration:0.5s;
+  }
+
+  .fade-out-with-delay{
+    -webkit-animation:fadeOut ease-Out 1;
+    -moz-animation:fadeOut ease-Out 1;
+    animation:fadeOut ease-Out 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:2s;
+    -moz-animation-duration:2s;
+    animation-duration:2s;
+
+    animation-delay:5s;
+    -webkit-animation-delay:5s;
+  }
+
+  .center-align{
+    text-align: center;
+  }
+
+  .outer-container{
+    width: 100%;
+    height: 94%;
+    display: table;
+
+    .inner-container{
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  .items-container{
+    
+  }
+
+  .item-container{
+    min-width: 100px;
+    max-width: 140px;
+    background-color: white;
+    color: #00011f;
+    padding: 10px 30px;
+    margin: 20px;
+    font-size: 20px;
+    border-radius: 25px;
+    display: inline-table;
+    height: 60px;
+    cursor: pointer;
+    border: 1px solid white;
+  }
+
+  .item-container:hover{
+    background-color: #00011f;
+    color: white;
+  }
+
+  .icon-github{
+    background-image: url("../img/icon-github.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+  }
+
+  .icon-linkedin{
+    background-image: url("../img/icon-linkedin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+  }
+
+  .icon-jsfiddle{
+    background-image: url("../img/icon-jsfiddle.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+  }
+
+  .icon-pdf{
+    background-image: url("../img/icon-pdf.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+  }
+
+  .icon-ear{
+    background-image: url("../img/icon-ear.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+  }
+
+  .icon-eye{
+    background-image: url("../img/icon-eye.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+  }
+
+  .icon-brain{
+    background-image: url("../img/icon-brain.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+  }
+
+  .article{
+
+    h2{
+      margin-bottom: 0px;
+    }
+
+    p{
+      text-align: left;
+      color: $blueColor;
+    }
+
+    a{
+      cursor: pointer;
+      color: $blueColor;
+    }
+
+    a:hover{
+      color: lightsteelblue;
+    }
+
+    a:active{
+      color: lightsteelblue;
+    }
+  }
+
+  .date{
+      text-align: left;
+      color: lightsteelblue;
+      font-size: 9px;
+      margin: 0px 0px 10px;
+      font-weight: 100;
+    }
+
+  .article{
+    &.external-link:hover{
+      cursor: pointer;
+      h2{
+        color: lightsteelblue;
+      }
+      p{
+        color: lightsteelblue;
+      }
+      div{
+        color: lightsteelblue;
+      }
+    }
+  };
+
+  .indented-div{
+    margin-left: 25px;
+  }
+
+  .footer{
+
+    font-family: 'Sue Ellen Francisco', cursive;
+
+    color: #524F66;
+    position: relative;
+    bottom: 5px;
+    width: 100%;
+    font-size: 10px;
+    font-weight: 400;
+    padding-top: 20px;
+    z-index: 2000;
+
+    span{
+      display: inline;
+    }
+
+    .visitor-input{
+      position: absolute;
+      right: 0px;
+      cursor: pointer;
+    }
+  }
+}
+
+.overlay-container{
+  width: 100%;
+  position: absolute;
+  display: table;
+  height: 100%;
+  z-index: 1000;
+
+  .overlay{
+    color: red;
+    border-radius: 20px;
+    vertical-align: middle;
+    display: table-cell;
+
+    div{
+      background-color: rgba(0,0,31,0.8);
+      display: table;
+      margin: auto;
+      padding: 50px;
+      border-radius: 20px;
+      color: white;
+    }
+
+    p{
+      color: white;
+      text-align: left;
+      display: block;
+    }
+
+    .close-button{
+      float: right;
+      display: block;
+    }
+
+    a{
+      color: white;
+      display: block;
+    }
+
+    a:hover{
+      color: lightsteelblue;
+      display: block;
+    }
+
+    input{
+      display: block;
+    }
+
+    textarea{
+      display: block;
+    }
+  }
+}
+
+.blur-on{
+  -webkit-filter: grayscale(100%) blur(1.5px);
+  transition: 0.5s;
+}
+
+.blur-off{
+  -webkit-filter: grayscale(0%) blur(0px);
+  transition: 0.5s;
+}
+
+.hidden{
+  display: none;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+// iPhone
+@media all and (max-width: 480px){
+  h1{
+    font-weight: 300;
+  }
+
+  .content{
+    padding: 1px 20px 10px;
+    margin: 10px 0px;
+  }
+}
+
+// iPad
+@media all and (min-width: 481px) and (max-width: 768px){
+  h1{
+    font-weight: 300;
+  }
+
+  .content{
+    padding: 1px 20px 10px;
+    margin: 10px 10px;
+  }
+}
+
+// Desktop
+@media all and (min-width: 769px){
+  h1{
+    font-weight:100;
+  }
+
+  .content{
+    padding: 1px 20px 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.body{
+  background-color: $blueColor;
+  margin: 0 auto;
+  width: 100%;
+  clear: both;
+
+  h1{
+    // font-weight: 100;
+    // color: white;
+    margin: 10px 0px;
+  }
+
+  h2{
+    margin-top: 20px;
+  }
+
+  p{
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin: 0px;
+  }
+}
+
+.content{
+  text-align: left;
+  background-color: white;
+  border-radius: 10px;
+  color: $blueColor;
+  max-width: 700px;
+
+  .jsfiddles{
+    font-size: 8px;
+  }
+}
+
+.extra-margin-top{
+
+  margin: 20px 0px;
+  text-align: center;
+}

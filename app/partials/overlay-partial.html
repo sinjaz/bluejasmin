@@ -1,0 +1,13 @@
+<div ng-class="{'overlay':true}">
+				 <div ng-show="!showConfirmation">
+				 	<p>Wanna leave me a note?</p>
+				 	<input type="text" placeholder="Name..." ng-model="message.name"></input>
+				 	<textarea placeholder="Write me something..." ng-model="message.body"></textarea>
+				 	<button ng-click="onSubmit()">Submit</button>
+				 	<a class="close-button" href="" ng-click="closeOverlay()">CLOSE</a>
+				 </div>
+
+				 <div ng-show="showConfirmation" class="fade-out-with-delay">
+				 	Thank you! I'll read it soon.
+				 </div>
+</div>
