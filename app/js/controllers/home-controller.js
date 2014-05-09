@@ -27,13 +27,13 @@ sinjaz.controllers.controller('HomeController', ['$scope', '$location', '$routeP
                 id : 0,
         		buttonTitle : 'Work & Serious',
                 pageTitle : "Let's talk business",
-                url : '/#/me/work'
+                url : '#/me/work'
         	},
         	{
                 id : 1,
         		buttonTitle: 'Fun & Play!!',
                 pageTitle : 'Sina, the person',
-                url : '/#/me/fun'
+                url : '#/me/fun'
         	}
         ];
   }]);

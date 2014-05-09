@@ -11,12 +11,7 @@
 </head>
 <body class="body center-align" ng-app="sinjaz">
 
-  <div  ng-show="sinahaha"
-        ng-class="{'fade-in': showOverlay,
-                   'fade-out':!showOverlay,
-                   'overlay-container': true}"
-        ng-include="'partials/overlay-partial.html'" 
-        ng-controller="OverlayController"></div>
+  <div class="header" ng-include="'partials/header-partial.html'" ng-controller="HeaderController"></div>
 
   <div class="outer-container">
     <div ng-class="{'inner-container': true,
@@ -26,8 +21,6 @@
   <div class="footer" ng-include="'partials/footer-partial.html'" ng-controller="FooterController"></div>
 
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-  <script src="//www.parsecdn.com/js/parse-1.2.17.min.js"></script>
-  
   <script src="app.js"></script>
   
   <script src="controllers/fun-controller.js"></script>
@@ -35,6 +28,7 @@
   <script src="controllers/work-controller.js"></script>
   <script src="controllers/later-controller.js"></script>
   <script src="controllers/footer-controller.js"></script>
+  <script src="controllers/header-controller.js"></script>
   <script src="controllers/overlay-controller.js"></script>
 
   <script src="services/data-service.js"></script>

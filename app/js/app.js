@@ -15,11 +15,7 @@ angular.module('sinjaz', ['sinjaz.filters', 'sinjaz.services', 'sinjaz.directive
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/later', {templateUrl: 'partials/later-partial.html', controller: 'LaterController'});
     $routeProvider.when('/home', {templateUrl: 'partials/home-partial.html', controller: 'HomeController'});
-    //$routeProvider.when('/me/:pageid', {templateUrl: 'partials/me-partial.html', controller: 'MeController'});
     $routeProvider.when('/me/work', {templateUrl: 'partials/work-partial.html', controller: 'WorkController'});
     $routeProvider.when('/me/fun', {templateUrl: 'partials/fun-partial.html', controller: 'FunController'});
     $routeProvider.otherwise({redirectTo: '/home'});
   }]);
-
-
-Parse.initialize("jgaXkgASh6Afvr9i4BHK4sktFKgxo4xMRT10KieM", "BacarQrlVq3MirkbUHn6Fd2UntaWvBk9F6eWKXhZ");

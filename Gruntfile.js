@@ -87,7 +87,7 @@ module.exports = function(grunt) {
 		      {expand: true, flatten: true, src: ['app/js/controllers/*'], dest: 'out/controllers/'},
 		      {expand: true, flatten: true, src: ['app/js/services/*'], dest: 'out/services/'},
 		      {expand: true, flatten: true, src: ['app/js/directives/*'], dest: 'out/directives/'},
-		      {expand: true, flatten: true, src: ['app/js/app.js'], dest: 'out'},
+		      {expand: true, flatten: true, src: ['app/js/app.js'], dest: 'out'}
 		    ]
 		  },
 		  deploy: {
