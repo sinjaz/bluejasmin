@@ -1,4 +1,5 @@
 @import 'header';
+@import 'slideshow';
 
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
 @import url(http://fonts.googleapis.com/css?family=Sue+Ellen+Francisco);
@@ -40,6 +41,9 @@ html{
 .body{
   //background-color: $blueColor;
   background: -webkit-linear-gradient(#004575, #248691);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   margin: 0 auto;
   width: 100%;
   clear: both;
