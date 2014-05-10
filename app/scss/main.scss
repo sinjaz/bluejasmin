@@ -1,5 +1,6 @@
 @import 'header';
 @import 'slideshow';
+@import 'footer';
 
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
 @import url(http://fonts.googleapis.com/css?family=Sue+Ellen+Francisco);
@@ -47,6 +48,14 @@ html{
   margin: 0 auto;
   width: 100%;
   clear: both;
+
+  button{
+    background-color: rgba(0,0,0,0);
+    border: 1px solid white;
+    color: white;
+    padding: 7px;
+    font-family: 'Lato', sans-serif;
+  }
 
   h1{
     // font-weight: 100;
@@ -260,30 +269,6 @@ body{
 
   .indented-div{
     margin-left: 25px;
-  }
-
-  .footer{
-
-    font-family: 'Sue Ellen Francisco', cursive;
-
-    color: #524F66;
-    position: relative;
-    bottom: 5px;
-    width: 100%;
-    font-size: 10px;
-    font-weight: 400;
-    padding-top: 20px;
-    z-index: 2000;
-
-    span{
-      display: inline;
-    }
-
-    .visitor-input{
-      position: absolute;
-      right: 0px;
-      cursor: pointer;
-    }
   }
 }
 

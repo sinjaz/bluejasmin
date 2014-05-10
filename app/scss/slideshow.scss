@@ -30,7 +30,13 @@
 		.column{
 			float: left;
 			width: 27%;
-			padding: 3%;
+			margin: 3%;
+			position: relative;
+
+			button{
+				position: absolute;
+				right: 0px;
+			}
 
 			p{
 				text-align: left;

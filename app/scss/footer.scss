@@ -1,0 +1,50 @@
+.footer{
+
+  border-top: 1px solid white;
+  position: relative;
+  background-color: rgba(255,255,255,0.8);
+  width: 100%;
+  height: auto;
+  display: inline-block !important;
+  color: #004575;
+  margin-top: 20px;
+
+  .column-container{
+    text-align: left;
+    width: 65%;
+    margin: 0 auto;
+
+    .column{
+      color: #004575;
+      float: left;
+      width: 19%;
+      margin: 3%;
+      position: relative;
+
+      p{
+        color: #004575;
+      }
+
+      h1{
+        font-size: 19px;
+        color: #004575;
+      }
+
+      h2{
+        font-size: 15px;
+        color: #004575;
+        margin: 0px;
+        font-weight: 300;
+      }
+
+      ul{
+        padding: 0px;
+      }
+
+      li{
+        display: block;
+      }
+    }
+  }
+
+}

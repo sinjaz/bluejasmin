@@ -44,15 +44,17 @@
 
     </span>
 
+    <span class='footer' ng-include="'partials/footer-partial.html'" ng-controller='FooterController'></span>
+
   </span>
 
-  <div class='outer-container'>
+  <!-- <div class='footer' ng-include="'partials/footer-partial.html'" ng-controller='FooterController'></div> -->
+
+  <!-- <div class='outer-container'>
     <div ng-class='{'inner-container': true,
                     'blur-on': showOverlay,
                     'blur-off': !showOverlay}' ng-view></div>
-  </div>
-
-  <!-- <div class='footer' ng-include=''partials/footer-partial.html'' ng-controller='FooterController'></div> -->
+  </div> -->
 
   <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js'></script>
   <script src='app.js'></script>
