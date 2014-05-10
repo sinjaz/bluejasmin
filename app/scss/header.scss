@@ -4,30 +4,30 @@ $animation-duration: 0.25s;
 	background-color: rgba(255,255,255,0.3);
 	padding: 15px 30px;
 	border-bottom: 1px solid white;
-	position: fixed;
+	//position: fixed;
 	width: 100%;
 	box-sizing: border-box;
 	z-index:1;
+
+	.menu-icon{
+		background-image: url("../img/icon-menu.png");
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    background-size: 25px;
+		width: 50px;
+		height: 100%;
+		display: block;
+		cursor: pointer;
+	}
 
 	.nav-container{
 		background-image: url("../img/ps-logo.png");
 	    background-size: contain;
 	    background-repeat: no-repeat;
 	    background-position: center;
-	    padding-left: 25px;
 	    height: 70px;
 		position: relative;
-
-	    ul{
-	    	bottom: 0px;
-			position: absolute;
-			right: 0px;
-	    }
-
-		li{
-			display: inline;
-			margin-right: 10px;
-		}
 	}
 }
 
@@ -39,12 +39,37 @@ $animation-duration: 0.25s;
 }
 
 .nav-container2{
+	background-image: url("../img/background-grey.png");
+    background-size: contain;
+	color: white;//#004575;
 	width: 200px;
-	background-color: black;
 	height: 100%;
 	position: fixed;
 	//display: none;
 	left: -200px;
+	padding-top: 40px;
+	padding-left: 20px;
+	box-sizing: border-box;
+
+	ul{
+		position: absolute;
+		padding: 0px;
+	}
+
+	li{
+		display: block;
+		font-size: 17px;
+		margin-bottom: 15px;
+	}
+
+	.padsquad-logo{
+		display: block;
+		width: 100%;
+		height: 40px;
+		background-image: url("../img/ps-logo.png");
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	}
 }
 
 .content-container2{
@@ -65,13 +90,14 @@ $animation-duration: 0.25s;
 }
 
 .content-container2-open-menu{
-	-webkit-animation: firstanimation $animation-duration;
+	-webkit-animation: contentanimation $animation-duration;
 	right: -200px;
-	//-webkit-filter: brightness(0.6) blur(2px);
+	//-webkit-filter: blur(3px);
 }
 
 .content-container2-close-menu{
-	-webkit-animation: firstanimationreverese $animation-duration;
+	-webkit-animation: contentanimationreverese $animation-duration;
+	//-webkit-filter: blur(0px);
 }
 
 @-webkit-keyframes menuanimation
@@ -86,16 +112,24 @@ $animation-duration: 0.25s;
 	to {left: -200px;}
 }
 
-@-webkit-keyframes firstanimation
+@-webkit-keyframes contentanimation
 {
-	from {right: 0px;}
-	to {right: -200px;}
+	from {
+		right: 0px;
+	}
+	to {
+		right: -200px;
+	}
 }
 
-@-webkit-keyframes firstanimationreverese
+@-webkit-keyframes contentanimationreverese
 {
-	from {right: -200px;}
-	to {right: 0px;}
+	from {
+		right: -200px;
+	}
+	to {
+		right: 0px;
+	}
 }
 
 
