@@ -2,8 +2,8 @@
 
 /* Controllers */
 
-sinjaz.controllers.controller('HomeController', ['$scope', '$location', '$routeParams',
-                                         function($scope ,  $location ,  $routeParams) {
+sinjaz.controllers.controller('HomeController', ['$scope', '$rootScope', '$location', '$routeParams',
+                                         function($scope ,  $rootScope , $location ,  $routeParams) {
         console.log("HomeController");
         $scope.itemClickedOn;
 

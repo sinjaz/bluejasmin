@@ -11,6 +11,7 @@
 		background-image: url("../img/ps-logo.png");
 	    background-size: contain;
 	    background-repeat: no-repeat;
+	    background-position: center;
 	    padding-left: 25px;
 	    height: 70px;
 		position: relative;
@@ -27,3 +28,39 @@
 		}
 	}
 }
+
+.main-container{
+	overflow: hidden;
+	box-sizing: border-box;
+	overflow-y: scroll;
+	min-height: 100%;
+}
+
+.nav-container2{
+	width: 200px;
+	background-color: black;
+	height: 100%;
+	position: fixed;
+	display: none;
+}
+
+.content-container2{
+	position: relative;
+	right: 0px;
+	box-shadow: 0 10px 25px #000000;
+}
+
+.nav-container2-open-menu{
+	display: block;
+}
+
+.content-container2-open-menu{
+	right: -200px;
+	-webkit-filter: brightness(0.6) blur(2px);
+}
+
+
+
+
+
+
