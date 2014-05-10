@@ -15,11 +15,13 @@
       
     <div ng-include="'partials/menu-partial.html'"
           ng-class='{"nav-container2": true,
-                    "nav-container2-open-menu": openMenuBool}'>MENU
+                    "nav-container2-open-menu": openMenuBool,
+                    "nav-container2-close-menu": !openMenuBool}'>MENU
     </div>
 
     <div ng-class='{"content-container2": true,
-                    "content-container2-open-menu": openMenuBool}'>
+                    "content-container2-open-menu": openMenuBool,
+                    "content-container2-close-menu": !openMenuBool}'>
 
       <div class='header' ng-include="'partials/header-partial.html'" ng-controller='HeaderController'></div>
 

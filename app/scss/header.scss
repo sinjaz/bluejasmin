@@ -1,3 +1,5 @@
+$animation-duration: 0.25s;
+
 .header{
 	background-color: rgba(255,255,255,0.3);
 	padding: 15px 30px;
@@ -41,7 +43,8 @@
 	background-color: black;
 	height: 100%;
 	position: fixed;
-	display: none;
+	//display: none;
+	left: -200px;
 }
 
 .content-container2{
@@ -51,12 +54,48 @@
 }
 
 .nav-container2-open-menu{
-	display: block;
+	-webkit-animation: menuanimation $animation-duration;
+	left: 0px;
+}
+
+.nav-container2-close-menu{
+	left: inherit;
+	-webkit-animation: menuanimationreverese $animation-duration;
+	left: -200px;
 }
 
 .content-container2-open-menu{
+	-webkit-animation: firstanimation $animation-duration;
 	right: -200px;
-	-webkit-filter: brightness(0.6) blur(2px);
+	//-webkit-filter: brightness(0.6) blur(2px);
+}
+
+.content-container2-close-menu{
+	-webkit-animation: firstanimationreverese $animation-duration;
+}
+
+@-webkit-keyframes menuanimation
+{
+	from {left: -200px;}
+	to {left: 0px;}
+}
+
+@-webkit-keyframes menuanimationreverese
+{
+	from {left: 0px;}
+	to {left: -200px;}
+}
+
+@-webkit-keyframes firstanimation
+{
+	from {right: 0px;}
+	to {right: -200px;}
+}
+
+@-webkit-keyframes firstanimationreverese
+{
+	from {right: -200px;}
+	to {right: 0px;}
 }
 
 
