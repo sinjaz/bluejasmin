@@ -17,37 +17,37 @@ sinjaz.controllers.controller('MainController', ['$scope', '$rootScope', '$locat
         	{
                 id : 0,
         		buttonTitle : 'Our Approach',
-                url : '#/me/work'
+                url : '#/approach'
         	},
         	{
                 id : 1,
         		buttonTitle: 'Advertisers',
-                url : '#/me/fun'
+                url : '#/advertisers'
         	},
             {
                 id : 1,
                 buttonTitle: 'Create Ad Gallery',
-                url : '#/me/fun'
+                url : '#/gallery'
             },
             {
                 id : 1,
                 buttonTitle: 'Publishers',
-                url : '#/me/fun'
+                url : '#/publishers'
             },
             {
                 id : 1,
                 buttonTitle: 'Blog',
-                url : '#/me/fun'
+                url : '#/blog'
             },
             {
                 id : 1,
                 buttonTitle: 'Contact Us',
-                url : '#/me/fun'
+                url : '#/contact'
             },
             {
                 id : 1,
                 buttonTitle: 'Job Postings',
-                url : '#/me/fun'
+                url : '#/jobs'
             }
         ];
   }]);

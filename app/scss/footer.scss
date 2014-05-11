@@ -1,5 +1,13 @@
 .footer{
 
+  a{
+    color:#004575;
+  }
+
+  a:hover{
+    color:white;
+  }
+
   border-top: 1px solid white;
   position: relative;
   background-color: rgba(255,255,255,0.8);
@@ -47,5 +55,4 @@
       }
     }
   }
-
 }

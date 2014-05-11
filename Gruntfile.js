@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 
 		watch: {
 		  scripts: {
-		    files: ['app/js/*.js', 'app/js/*/*.js', 'app/scss/*.scss', 'app/partials/*.html', 'app/*.html'],
+		    files: ['app/js/*.js', 'app/js/*/*.js', 'app/scss/*.scss', 'app/partials/**/*.html', 'app/*.html'],
 		    tasks: ['dev'],
 		    options: {
 		      spawn: false,
@@ -82,7 +82,8 @@ module.exports = function(grunt) {
 		      // includes files within path and its sub-directories
 		      {expand: false, src: ['app/index-dev.html'], dest: 'out/index.html'},
 		      {expand: true, flatten: true, src: ['app/assets/*'], dest: 'out/assets/'},
-		      {expand: true, flatten: true, src: ['app/partials/*'], dest: 'out/partials/'},
+		      {expand: true, cwd: 'app/partials/', src: ['**'], dest: 'out/partials/'},
+		      {expand: true, cwd: 'app/lib/', src: ['**'], dest: 'out/lib/'},
 		      {expand: true, flatten: true, src: ['app/img/*'], dest: 'out/img/'},
 		      {expand: true, flatten: true, src: ['app/js/controllers/*'], dest: 'out/controllers/'},
 		      {expand: true, flatten: true, src: ['app/js/services/*'], dest: 'out/services/'},

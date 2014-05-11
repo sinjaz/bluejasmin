@@ -1,0 +1,9 @@
+<div ng-class="{'nav-container':true}">
+	<a class='icon-home' href='#/home'></a>
+	<ul id="navContainer">
+		<li 
+			ng-click="onClickItem()"
+			ng-repeat="item in items">
+			<a href='{{item.url}}'>{{item.buttonTitle}}</a></li>
+	</ul>
+</div>

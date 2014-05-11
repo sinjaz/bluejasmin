@@ -22,10 +22,6 @@ $animation-duration: 0.25s;
 	}
 
 	.nav-container{
-		background-image: url("../img/ps-logo.png");
-	    background-size: contain;
-	    background-repeat: no-repeat;
-	    background-position: center;
 	    height: 70px;
 		position: relative;
 	}
@@ -41,25 +37,41 @@ $animation-duration: 0.25s;
 .nav-container2{
 	background-image: url("../img/background-grey.png");
     background-size: contain;
-	color: white;//#004575;
+	color: #004575;
 	width: 200px;
 	height: 100%;
 	position: fixed;
 	//display: none;
 	left: -200px;
 	padding-top: 40px;
-	padding-left: 20px;
+	padding-left: 0px;
 	box-sizing: border-box;
 
 	ul{
+		padding: 40px 0px 0px 20px;
 		position: absolute;
-		padding: 0px;
 	}
 
 	li{
 		display: block;
 		font-size: 17px;
 		margin-bottom: 15px;
+	}
+
+	a{
+		color: #004575;
+	}
+
+	a:hover{
+		color: #DDDDDD;
+	}
+
+	.icon-home{
+		height: 32px;
+		width: 100%;
+		position: relative;
+		margin: 0px;
+		background-position: center;
 	}
 
 	.padsquad-logo{
@@ -92,12 +104,12 @@ $animation-duration: 0.25s;
 .content-container2-open-menu{
 	-webkit-animation: contentanimation $animation-duration;
 	right: -200px;
-	//-webkit-filter: blur(3px);
+	//-webkit-filter: blur(3px) grayscale(100%);
 }
 
 .content-container2-close-menu{
 	-webkit-animation: contentanimationreverese $animation-duration;
-	//-webkit-filter: blur(0px);
+	//-webkit-filter: blur(0px) grayscale(0%);
 }
 
 @-webkit-keyframes menuanimation
@@ -131,8 +143,6 @@ $animation-duration: 0.25s;
 		right: 0px;
 	}
 }
-
-
 
 
 

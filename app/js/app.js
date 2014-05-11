@@ -13,9 +13,13 @@ sinjaz.components   = angular.module('sinjaz.components', []);
 
 angular.module('sinjaz', ['sinjaz.filters', 'sinjaz.services', 'sinjaz.directives', 'sinjaz.controllers', 'sinjaz.components', 'sinjaz.constants']).
   config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/later', {templateUrl: 'partials/later-partial.html', controller: 'LaterController'});
-    $routeProvider.when('/home', {templateUrl: 'partials/home-partial.html', controller: 'HomeController'});
-    $routeProvider.when('/me/work', {templateUrl: 'partials/work-partial.html', controller: 'WorkController'});
-    $routeProvider.when('/me/fun', {templateUrl: 'partials/fun-partial.html', controller: 'FunController'});
+    $routeProvider.when('/home', 		{templateUrl: 'partials/pages/home-partial.html', 		controller: 'HomeController'});
+    $routeProvider.when('/approach', 	{templateUrl: 'partials/pages/approach-partial.html', 	controller: 'HomeController'});
+    $routeProvider.when('/advertisers', {templateUrl: 'partials/pages/advertisers-partial.html', 	controller: 'HomeController'});
+    $routeProvider.when('/gallery', 	{templateUrl: 'partials/pages/gallery-partial.html', 		controller: 'HomeController'});
+    $routeProvider.when('/publishers', 	{templateUrl: 'partials/pages/publishers-partial.html', 	controller: 'HomeController'});
+    $routeProvider.when('/blog', 		{templateUrl: 'partials/pages/blog-partial.html', 		controller: 'HomeController'});
+    $routeProvider.when('/contact', 	{templateUrl: 'partials/pages/contact-partial.html', 		controller: 'HomeController'});
+    $routeProvider.when('/jobs', 		{templateUrl: 'partials/pages/jobs-partial.html', 		controller: 'HomeController'});
     $routeProvider.otherwise({redirectTo: '/home'});
   }]);

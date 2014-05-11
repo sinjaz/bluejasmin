@@ -1,0 +1,46 @@
+@media only screen 
+and (min-width : 200px) 
+and (max-width : 768px) {
+	.footer{
+		
+		.column-container{
+
+
+			width: 100%;
+			margin: 0px;
+
+			.column{
+				width: 100%;
+				box-sizing: border-box;
+				padding: 10px;
+				margin: 10px 0px 0px 10px;
+				border-bottom: 1px solid;
+
+				ul{
+				margin: 0px;
+				}
+
+				h1{
+				margin: 0px;
+				}
+			}
+		}
+	}
+
+    .content-container{
+
+		.column-container{
+
+			.column{
+			  	width: 100%;
+				box-sizing: border-box;
+				padding: 20px;
+				margin: 0px;
+
+				button{
+					right: 20px;
+				}
+			}
+		}
+	}
+}

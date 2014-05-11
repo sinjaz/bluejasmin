@@ -9,11 +9,16 @@
 
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
-<body class='body center-align' ng-app='sinjaz'>
+<body ng-app='sinjaz'
+      ng-controller='MainController'
+      ng-class="{'body': true,
+                 'center-align': true,
+                 'body-open-menu': openMenuBool,
+                 'body-close-menu': !openMenuBool}">
 
-  <div class='main-container' ng-controller='MainController'>
+  <div class='main-container'>
       
-    <div ng-include="'partials/menu-partial.html'"
+    <div ng-include="'partials/common/menu-partial.html'"
           ng-class='{"nav-container2": true,
                     "nav-container2-open-menu": openMenuBool,
                     "nav-container2-close-menu": !openMenuBool}'>
@@ -23,14 +28,14 @@
                     "content-container2-open-menu": openMenuBool,
                     "content-container2-close-menu": !openMenuBool}'>
 
-      <div class='header' ng-include="'partials/header-partial.html'" ng-controller='HeaderController'></div>
+      <div class='header' ng-include="'partials/common/header-partial.html'" ng-controller='HeaderController'></div>
 
       <span class='content-container'>
 
         <!-- <span ng-include="'partials/home-partial.html'" ng-controller='FooterController'></span> -->
         <span ng-view ng-controller='FooterController'></span>
 
-        <span class='footer' ng-include="'partials/footer-partial.html'" ng-controller='FooterController'></span>
+        <span class='footer' ng-include="'partials/common/footer-partial.html'" ng-controller='FooterController'></span>
 
       </span>
 
@@ -46,23 +51,16 @@
                     'blur-off': !showOverlay}' ng-view></div>
   </div> -->
 
-  <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js'></script>
+  <!-- <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js'></script> -->
+  <script src='lib/angular/angular.min.js'></script>
   <script src='app.js'></script>
   
   <script src='controllers/main-controller.js'></script>
-  <script src='controllers/fun-controller.js'></script>
   <script src='controllers/home-controller.js'></script>
-  <script src='controllers/work-controller.js'></script>
-  <script src='controllers/later-controller.js'></script>
   <script src='controllers/footer-controller.js'></script>
   <script src='controllers/header-controller.js'></script>
-  <script src='controllers/overlay-controller.js'></script>
 
   <script src='services/data-service.js'></script>
-
-  <script src='directives/awesome-directive.js'></script>
-  <script src='directives/hello-directive.js'></script>
-  <script src='directives/my-directive.js'></script>
 
 </body>
 </html>
