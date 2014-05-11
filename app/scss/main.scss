@@ -55,11 +55,9 @@ $blueColor: #00011f;
 @-webkit-keyframes fadeIn {
   from {
     opacity:0;
-    margin-top: 20px;
   }
   to {
     opacity:1;
-    margin-top: 0px;
   }
 }
 
@@ -81,22 +79,48 @@ html{
 
   .body-open-menu{
     overflow: hidden;
+    //background: gray;
+    background: -webkit-linear-gradient(#004575, #00BFD5);
+    background: -webkit-linear-gradient(#004575, #00BFD5);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   .body-close-menu{
     overflow: scroll;
+    background: -webkit-linear-gradient(#004575, #00BFD5);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
 
 body{
-  //background-color: $blueColor;
-  background: -webkit-linear-gradient(#004575, #248691);
   height: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   margin: 0 auto;
   width: 100%;
   clear: both;
+
+  .dark-overlay{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: rgba(0,0,0,0.8);
+    cursor: pointer;
+  }
+
+  .overlay-open-menu{
+    -webkit-animation: fadeIn 0.5s;
+    opacity: 1;
+    display: block;
+  }
+
+  .overlay-close-menu{
+    -webkit-animation: fadeOut 0.5s;
+    opacity: 0;
+    display: none;
+  }
 
   button{
     background-color: rgba(0,0,0,0);

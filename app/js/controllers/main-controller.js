@@ -6,7 +6,9 @@ sinjaz.controllers.controller('MainController', ['$scope', '$rootScope', '$locat
                                          function($scope ,  $rootScope , $location ,  $routeParams) {
         console.log("MainController");
 
-        $scope.openMenuBool = false;
+        $scope.clickOnMenu = function(){
+            $rootScope.$broadcast('openMenu'); 
+        }
 
         $rootScope.$on('openMenu', function(event, e){
             $scope.openMenuBool = !$scope.openMenuBool;

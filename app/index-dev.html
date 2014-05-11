@@ -16,25 +16,38 @@
                  'body-open-menu': openMenuBool,
                  'body-close-menu': !openMenuBool}">
 
+  <!-- MAIN CONTAINER -->
   <div class='main-container'>
       
+    <!-- NAVIGATION WINDOW -->
     <div ng-include="'partials/common/menu-partial.html'"
           ng-class='{"nav-container2": true,
                     "nav-container2-open-menu": openMenuBool,
                     "nav-container2-close-menu": !openMenuBool}'>
     </div>
 
+    <!-- CONTENT WINDOW -->
     <div ng-class='{"content-container2": true,
                     "content-container2-open-menu": openMenuBool,
                     "content-container2-close-menu": !openMenuBool}'>
 
+      <!-- DARK OVERLAY -->
+      <span class='dark-overlay'
+            ng-class="{'dark-overlay': true,
+                       'overlay-open-menu': openMenuBool,
+                       'overlay-close-menu': !openMenuBool}"
+            ng-click='clickOnMenu()'></span>
+
+      <!-- HEADER -->
       <div class='header' ng-include="'partials/common/header-partial.html'" ng-controller='HeaderController'></div>
 
+      <!-- CONTENT -->
       <span class='content-container'>
 
-        <!-- <span ng-include="'partials/home-partial.html'" ng-controller='FooterController'></span> -->
-        <span ng-view ng-controller='FooterController'></span>
-
+        <!-- MAIN PARTIAL -->
+        <span ng-view></span>
+        
+        <!-- FOOTER -->
         <span class='footer' ng-include="'partials/common/footer-partial.html'" ng-controller='FooterController'></span>
 
       </span>
@@ -42,14 +55,6 @@
     </div>
 
   </div>
-
-  <!-- <div class='footer' ng-include="'partials/footer-partial.html'" ng-controller='FooterController'></div> -->
-
-  <!-- <div class='outer-container'>
-    <div ng-class='{'inner-container': true,
-                    'blur-on': showOverlay,
-                    'blur-off': !showOverlay}' ng-view></div>
-  </div> -->
 
   <!-- <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js'></script> -->
   <script src='lib/angular/angular.min.js'></script>

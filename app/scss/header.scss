@@ -59,11 +59,11 @@ $animation-duration: 0.25s;
 	}
 
 	a{
-		color: #004575;
+		color: #ffffff;
 	}
 
 	a:hover{
-		color: #DDDDDD;
+		color: #248691;
 	}
 
 	.icon-home{
@@ -104,12 +104,12 @@ $animation-duration: 0.25s;
 .content-container2-open-menu{
 	-webkit-animation: contentanimation $animation-duration;
 	right: -200px;
-	//-webkit-filter: blur(3px) grayscale(100%);
+	//-webkit-filter: grayscale(70%);
 }
 
 .content-container2-close-menu{
 	-webkit-animation: contentanimationreverese $animation-duration;
-	//-webkit-filter: blur(0px) grayscale(0%);
+	//-webkit-filter: grayscale(0%);
 }
 
 @-webkit-keyframes menuanimation
